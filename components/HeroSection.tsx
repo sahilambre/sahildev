@@ -91,6 +91,17 @@ const HeroSection = () => {
     },
   };
 
+  const scrollVariant = {
+    animate: {
+      x: [-20, 20, -20],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <>
       <div className="flex flex-col md:flex-row h-screen relative">
@@ -182,7 +193,17 @@ const HeroSection = () => {
         {/* Scrollable Text Section */}
         <div className="absolute bottom-0 w-full">
           <div className="overflow-hidden">
-            <motion.div className="whitespace-nowrap animate-marquee text-xl text-center text-black flex justify-center items-center space-x-2 mb-4">
+            <motion.div
+              className="whitespace-nowrap text-xl text-center text-gray-400 dark:text-white flex justify-center items-center space-x-2 mb-4"
+              animate={{
+                y: [12, 2, 12], // Animate the text moving up and down
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
               <PiMouseSimple size={30} /> <span>Scroll</span>
             </motion.div>
           </div>
