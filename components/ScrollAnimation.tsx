@@ -1,9 +1,12 @@
 import React from "react";
 import { VelocityScroll } from "./ui/scroll-based-velocity";
 
-const TechStack = () => {
+const ScrollAnimation = () => {
   return (
     <div>
+      <br />
+      <br />
+      <br />
       <VelocityScroll
         text="I write code."
         default_velocity={3}
@@ -13,4 +16,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default ScrollAnimation;
