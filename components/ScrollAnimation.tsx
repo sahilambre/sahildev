@@ -7,6 +7,9 @@ const ScrollAnimation = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
       <VelocityScroll
         text="I write code."
         default_velocity={3}
