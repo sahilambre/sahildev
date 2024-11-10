@@ -31,7 +31,21 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoaded }) => {
           className="absolute inset-0 flex items-center justify-center bg-black"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
+          style={{ willChange: "transform, opacity" }} // Hint for hardware acceleration
         >
+          {/* Image animation with independent rotation speed */}
+          <motion.img
+            src="/among-us.webp" // Path to your image in the public folder
+            alt="Among Us Character"
+            className="absolute h-20 w-auto mb-40"
+            style={{ willChange: "transform" }} // Apply for smoother animation
+            initial={{ x: "-50vw", rotate: 0 }} // Start outside the left of the screen with no rotation
+            animate={{ x: "100vw", rotate: 1080 }} // Move to the right with multiple 360-degree rotations
+            transition={{
+              x: { duration: 5, ease: "linear" }, // Movement transition
+              rotate: { duration: 2, repeat: Infinity, ease: "linear" }, // Independent rotation speed
+            }}
+          />
           <motion.div
             className="text-white text-4xl font-bold"
             initial={{ scale: 1 }}
