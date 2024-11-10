@@ -1,17 +1,26 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLImageElement>(null);
   const targetPosition = useRef({ x: 0, y: 0 });
   const currentPosition = useRef({
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
+    x: 0,
+    y: 0,
   });
   const currentAngle = useRef(0);
 
+  const [isClient, setIsClient] = useState(false);
+
+  // Detect if the component is being rendered on the client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Mouse move event handler
   useEffect(() => {
+    if (!isClient) return; // Ensure we're in the browser
+
     const handleMouseMove = (e: MouseEvent) => {
       targetPosition.current = { x: e.clientX, y: e.clientY };
     };
@@ -21,10 +30,12 @@ const CustomCursor = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [isClient]);
 
   // Animation loop for smooth follow and rotation
   useEffect(() => {
+    if (!isClient) return; // Ensure we're in the browser
+
     const followCursor = () => {
       const { x: targetX, y: targetY } = targetPosition.current;
       const { x: currentX, y: currentY } = currentPosition.current;
@@ -49,7 +60,9 @@ const CustomCursor = () => {
     };
 
     followCursor();
-  }, []);
+  }, [isClient]);
+
+  if (!isClient) return null; // Prevent rendering on server-side
 
   return (
     <>

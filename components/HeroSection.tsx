@@ -91,17 +91,6 @@ const HeroSection = () => {
     },
   };
 
-  const scrollVariant = {
-    animate: {
-      x: [-20, 20, -20],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
       <div className="flex flex-col md:flex-row h-screen relative">
