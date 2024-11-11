@@ -52,7 +52,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoaded }) => {
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity, ease: "easeOut" }}
           >
-            {percentage}%
+            Loading {percentage}%
           </motion.div>
         </motion.div>
       )}
