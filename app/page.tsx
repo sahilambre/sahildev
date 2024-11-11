@@ -5,7 +5,7 @@ import Particles from "@/components/ui/particles";
 import Preloader from "@/components/PreLoader"; // Import your Preloader component
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-
+import About from "@/components/About";
 export default function Home() {
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");
@@ -40,6 +40,11 @@ export default function Home() {
         />
         <HeroSection />
         <ScrollAnimation />
+        <br />
+        <br />
+        <br />
+        <br />
+        {/* <About /> */}
       </div>
     </>
   );
