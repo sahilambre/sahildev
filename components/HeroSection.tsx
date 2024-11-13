@@ -47,13 +47,13 @@ const HeroSection = () => {
       scale: [1, 1.08, 1],
       rotate: [0, 2, -2, 0],
       boxShadow: [
-        "0 0 15px #8EECF5, 0 0 25px #FFFF00", // Neon cyan & purple
-        "0 0 20px #FF9CEE, 0 0 30px #000000", // Pink & magenta glow
-        "0 0 25px #FFF5BA, 0 0 35px #FFFF00", // Soft yellow and peach
-        "0 0 20px #A0F0B7, 0 0 30px #000000", // Green & minty glow
-        "0 0 20px #FFA07A, 0 0 30px #FFFF00", // Coral & warm peach
-        "0 0 25px #B3F0FF, 0 0 35px #000000", // Light blue & pastel lavender
-        "0 0 15px #F8DEB1, 0 0 25px #FFFF00", // Soft gold and pink
+        "0 0 15px #FFFF00, 0 0 25px #FFFF00", // Neon cyan & purple
+        "0 0 20px #000000, 0 0 30px #000000", // Pink & magenta glow
+        "0 0 25px #FFFF00, 0 0 35px #FFFF00", // Soft yellow and peach
+        "0 0 20px #000000, 0 0 30px #000000", // Green & minty glow
+        "0 0 20px #FFFF00, 0 0 30px #FFFF00", // Coral & warm peach
+        "0 0 25px #000000, 0 0 35px #000000", // Light blue & pastel lavender
+        "0 0 15px #FFFF00, 0 0 25px #FFFF00", // Soft gold and pink
       ],
       transition: {
         duration: 5,

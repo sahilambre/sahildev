@@ -20,16 +20,16 @@ const GLOBE_CONFIG: COBEOptions = {
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [14.5995, 120.9842], size: 0.03 },
-    { location: [19.076, 72.8777], size: 0.1 },
-    { location: [23.8103, 90.4125], size: 0.05 },
-    { location: [30.0444, 31.2357], size: 0.07 },
-    { location: [39.9042, 116.4074], size: 0.08 },
-    { location: [-23.5505, -46.6333], size: 0.1 },
-    { location: [19.4326, -99.1332], size: 0.1 },
-    { location: [40.7128, -74.006], size: 0.1 },
-    { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
+    { location: [40.7128, -74.006], size: 0.1 }, // New York City
+    { location: [34.0522, -118.2437], size: 0.1 }, // Los Angeles
+    { location: [41.8781, -87.6298], size: 0.1 }, // Chicago
+    { location: [29.7604, -95.3698], size: 0.1 }, // Houston
+    { location: [33.4484, -112.074], size: 0.08 }, // Phoenix
+    { location: [39.7392, -104.9903], size: 0.07 }, // Denver
+    { location: [47.6062, -122.3321], size: 0.08 }, // Seattle
+    { location: [25.7617, -80.1918], size: 0.1 }, // Miami
+    { location: [37.7749, -122.4194], size: 0.1 }, // San Francisco
+    { location: [38.9072, -77.0369], size: 0.06 }, // Washington, D.C.
   ],
 };
 
@@ -69,7 +69,7 @@ export default function Globe({
       state.width = width * 2;
       state.height = width * 2;
     },
-    [r],
+    [r]
   );
 
   const onResize = () => {
@@ -97,17 +97,17 @@ export default function Globe({
     <div
       className={cn(
         "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
-        className,
+        className
       )}
     >
       <canvas
         className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
+          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
         )}
         ref={canvasRef}
         onPointerDown={(e) =>
           updatePointerInteraction(
-            e.clientX - pointerInteractionMovement.current,
+            e.clientX - pointerInteractionMovement.current
           )
         }
         onPointerUp={() => updatePointerInteraction(null)}

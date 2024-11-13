@@ -6,6 +6,10 @@ import Preloader from "@/components/PreLoader"; // Import your Preloader compone
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Home() {
   const { theme } = useTheme();
   const [color, setColor] = useState("#ffffff");
@@ -45,6 +49,8 @@ export default function Home() {
         <br />
         <br />
         {/* <About /> */}
+        <ToastContainer />
+        <Contact />
       </div>
     </>
   );
