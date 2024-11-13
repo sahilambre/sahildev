@@ -47,13 +47,13 @@ const HeroSection = () => {
       scale: [1, 1.08, 1],
       rotate: [0, 2, -2, 0],
       boxShadow: [
-        "0 0 15px #8EECF5, 0 0 25px #A07CFE", // Neon cyan & purple
-        "0 0 20px #FF9CEE, 0 0 30px #FE8FB5", // Pink & magenta glow
-        "0 0 25px #FFF5BA, 0 0 35px #FFD6A0", // Soft yellow and peach
-        "0 0 20px #A0F0B7, 0 0 30px #C2FFC7", // Green & minty glow
-        "0 0 20px #FFA07A, 0 0 30px #ECA184", // Coral & warm peach
-        "0 0 25px #B3F0FF, 0 0 35px #E0BBE4", // Light blue & pastel lavender
-        "0 0 15px #F8DEB1, 0 0 25px #FD8BBC", // Soft gold and pink
+        "0 0 15px #8EECF5, 0 0 25px #FFFF00", // Neon cyan & purple
+        "0 0 20px #FF9CEE, 0 0 30px #000000", // Pink & magenta glow
+        "0 0 25px #FFF5BA, 0 0 35px #FFFF00", // Soft yellow and peach
+        "0 0 20px #A0F0B7, 0 0 30px #000000", // Green & minty glow
+        "0 0 20px #FFA07A, 0 0 30px #FFFF00", // Coral & warm peach
+        "0 0 25px #B3F0FF, 0 0 35px #000000", // Light blue & pastel lavender
+        "0 0 15px #F8DEB1, 0 0 25px #FFFF00", // Soft gold and pink
       ],
       transition: {
         duration: 5,
@@ -157,7 +157,7 @@ const HeroSection = () => {
             className="relative p-2 rounded-full"
             style={{
               borderImageSource:
-                "linear-gradient(90deg, #A07CFE, #FE8FB5, #FFBE7B, #FFD6A0)",
+                "linear-gradient(90deg, #FFFF00, #000000, #FFFF00, #000000)",
               borderImageSlice: 1,
             }}
             variants={borderVariants}
