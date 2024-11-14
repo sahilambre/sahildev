@@ -67,7 +67,11 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="z-10 flex min-h-64 items-center justify-center">
+      <div className="flex flex-col justify-center items-center mb-8">
+        <h1 className="text-5xl font-semibold">Let's connect</h1>
+        <h3 className="text-2xl">Feel free to reach out to me! 🙌🏼</h3>
+      </div>
+      <div className="z-10 flex  items-center justify-center mb-20">
         <ShimmerButton
           className="flex items-center gap-2 shadow-2xl"
           onClick={handleClick}
