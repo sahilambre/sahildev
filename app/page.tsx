@@ -9,6 +9,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UnderConstruction from "@/components/UnderConstruction";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -50,6 +51,7 @@ export default function Home() {
         <br />
         {/* <About /> */}
         <ToastContainer />
+        <UnderConstruction />
         <Contact />
       </div>
     </>
