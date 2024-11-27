@@ -68,7 +68,7 @@ const Contact = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center mb-8">
-        <h1 className="text-5xl font-semibold">Let's connect</h1>
+        <h1 className="text-5xl font-semibold">Let&apos;s connect</h1>
         <h3 className="text-2xl">Feel free to reach out to me! 🙌🏼</h3>
       </div>
       <div className="z-10 flex  items-center justify-center mb-20">

@@ -5,7 +5,7 @@ import Particles from "@/components/ui/particles";
 import Preloader from "@/components/PreLoader"; // Import your Preloader component
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import About from "@/components/About";
+// import About from "@/components/About";
 import Contact from "@/components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
